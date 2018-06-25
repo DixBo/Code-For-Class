@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+
+    <style>
+        body{
+           margin: 0px;
+        }
+
+        html {
+            font-family: 'Oxygen', sans-serif;
+        }
+        .container {
+            background-color: rgba(63, 63, 119, 0.63);
+        }
+
+        .container div {
+            display: none;
+        }
+        .container .toggle,
+        .container .logo {
+            display: inline-block;
+        }
+
+        .container .link {
+            display: block;
+            text-align: center;
+            color: white;
+            background-color: rgb(46, 46, 107);
+            text-decoration: none;
+            padding: 1em;
+        }
+
+        .container .link:hover,
+        .container .link:active {
+            background-color: white;
+            color: rgb(46, 46, 107);
+        }
+
+        .container .logo {
+            width: 10em;
+            text-align: center;
+            padding: 1em;
+            color: white;
+        }
+
+        .container a {
+            text-decoration: none;
+        }
+
+        .container .toggle {
+            padding: 1em;
+            color: black;
+        }
+
+        @media (min-width: 48em) {
+            .container {
+                display: flex;
+            }
+
+            .container div {
+                display: flex;
+            }
+            .container .left,
+            .container .right {
+                display: flex;
+                flex: 1;
+            }
+
+            .container .link {
+                width: auto;
+            }
+
+            .container .right {
+                justify-content: flex-end;
+            }
+            
+            .container .toggle {
+                display: none;
+            }
+        }
+        @media (min-width: 48em) {
+            .container div {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 48em) {
+            .container.active .toggle {
+                background: rgba(63, 63, 119, 0.63);
+                color: white;
+            }
+
+            .container .logo {
+                text-align: left;
+            }
+
+            .container.active div {
+                display: block;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a class="toggle" href="#" id="hamburger">
+                <i class="fa fa-bars"></i>
+        </a>
+        <a class="logo" href="#">MyName</a>
+        <div class="left">
+            <a class="link" href="#">Link 1</a>
+            <a class="link" href="#">Link 2</a>
+        </div>
+        <div class="right">
+            <a class="link" href="#">Link 3</a>
+        </div>
+    </div>
+</body>
+
+<script>
+    const hamburger = document.querySelector('#hamburger');
+
+    hamburger.addEventListener('click', (e) => {
+        hamburger.parentElement.classList.toggle('active');
+    })
+</script>
+</html>
