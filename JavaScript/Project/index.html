@@ -33,12 +33,29 @@
 
 <script>
      const todo = document.querySelectorAll('.todoItem');
+     const completed = document.querySelector('.completed');
+     const completedTodoWrapper = document.querySelector('.completedTodoWrapper');
 
-        todo.forEach(list => {
-            list.addEventListener('click', (event) => {
-                list.remove();
-            })
-        })
+        todo.forEach(list =>
+          list.addEventListener('click', (event) => {
+            // todoitem
+              
+            // create into li
+            var completedtodo = document.createElement("li");
+            // create textnode
+            var textcompleted = document.createTextNode(list.textContent);
+            // append text to the element
+            completedtodo.appendChild(textcompleted);
+            // console.log(completedtodo);
+            // add over to the ul
+            completedTodoWrapper.insertBefore(completedtodo, completed);
+            // remove
+            list.remove();
+            }));
+        
+            // list.addEventListener('click', (event) => {
+            //     
+            // }
 </script>
 
 </html>
