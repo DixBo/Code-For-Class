@@ -7,22 +7,99 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
   <style>
+      body {
+          margin: 40px 180px 40px 180px;
+      }
+
+      i {
+        color: #949699;
+      }
+
+      .logo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 40px;
+      }
+      .logo img{
+          width: 60px;
+      }
+
+      .search-bar {
+          display: flex;
+          box-shadow: #e6e8ed 5px 5px 5px 5px;
+      }
+
+      .search-bar input {
+          width: 100%;
+          height: 30px;
+          border-style: none;
+      }
+
+      .search {
+          margin-top: 6px;
+          margin-left: 10px;
+          margin-right: 10px;
+      }
+
+      .title {
+          font-size: 20px;
+          margin-bottom: 20px;
+      }
+
+    .blue-title {
+        color: #0079FF;
+        margin-bottom: 20px;
+    }
+
+    .top {
+        margin-top: 30px;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 50px;
+        padding: 0px;
+    }
     
+    li {
+        list-style: none;
+        font-size: 14px;
+    }
+
+    input {
+        font-size: 22px;
+    }
+
+    @media (max-width: 1599px) {
+        body {
+            margin-right:20px;
+            margin-left: 20px;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-row-gap: 20px;
+        }
+    }
   </style>
 </head>
 <body>
     <div class="search-engine-wrapping">
         <div class="logo">
-            <!-- <img src="Images/ds_circle_logo.png" alt=""> -->
+            <img src="Images/ds_circle_logo.png" alt="">
         </div>
 
         <div class="search-bar">
-            <input type="text" placeholder="Search DailySmarty">
+           <a class="search" href="#"><i class="fas fa-search"></i></a> <input type="text" placeholder="Search DailySmarty">
         </div>
 
         <div class="info-wrapper">
             <div class="section">
-                <div class="blue-title">JavaScript</div>
+                <div class="blue-title top">JavaScript</div>
                 <div class="title">Guide to rendering posts on a Google Map in Rails <span class="link"><a href="#"><i class="fas fa-share-square"></i></a></span></div>
                 <div class="list">
                     <ul>
