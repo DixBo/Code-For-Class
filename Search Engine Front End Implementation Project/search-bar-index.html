@@ -4,42 +4,55 @@
   <meta charset='UTF-8'>
   <title>Daily Smarty Search Engine</title>
 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
   <style>
+      body {
+          margin-left: 220px;
+          margin-right: 220px;
+      }
       .logo {
-          margin-top: 90px;
-          margin-bottom: 90px;
+          margin-top: 120px;
+          margin-bottom: 120px;
           display: flex;
           justify-content: center;
           align-items: center;
       }
       
       .logo img {
-          width: 60px;
-      }
-
-      .searchbar-wrapper {
-          display: grid;
-          grid-template-rows: 1fr 1fr;
-          grid-template-columns: 1fr 2fr 1fr;
+          width: 100px;
       }
 
       .search-bar {
           display: flex;
+          box-shadow: #e6e8ed 5px 5px 5px 5px;
           justify-content: center;
+          margin-top: 50px;
       }
 
       .search-bar input {
           width: 100%;
-          height: 50px;
+          height: 80px;
           font-size: 25px;
+          border-style: none;
+      }
+
+      .fa-search {
+          margin-top: 31px;
+          margin-right: 10px;
+          margin-left: 10px;
+          color: #949699;
       }
 
       .hint {
+          color: #b4b7ba;
           text-align: right;
+          margin-top: 15px;
       }
 
       .blue-title {
           color: blue;
+          margin-top: 175px;
       }
 
       .title-grid {
@@ -49,7 +62,41 @@
 
       .section {
           display: grid;
-          grid-template-columns: 25% 1fr 1fr 1fr 25%;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          grid-column-gap: 50px;
+          margin-top: 30px;
+      }
+
+      .Code-Language {
+          color:#949699;
+          font-weight: bold;
+          font-size: 12px;
+      }
+
+      @media (max-width: 1047px) {
+          body {
+              margin-right: 50px;
+              margin-left: 50px;
+          }
+          .section {
+              display: grid;
+              grid-template-columns: 1fr;
+              margin-top: 15px;
+          }
+
+          .blue-title {
+              margin-top:1px;
+          }
+
+          .logo {
+              margin-bottom: 40px;
+              margin-top: 40px;
+          }
+          
+          .Code-Language {
+              margin-bottom: 5px;
+          }
       }
   </style>
 </head>
@@ -62,39 +109,33 @@
         </div>
 
         <div class="searchbar-wrapper">
-            <div class="placeholder"></div>
             <div class="search-bar">
-                <input type="text" placeholder="Search DailySmarty">
+            <a href="search-bar-results.html"><i class="fas fa-search"></i></a> <input type="text" placeholder="Search DailySmarty">
             </div>
-            <div class="placeholder"></div>
-            <div class="placeholder"></div>
+
             <div class="hint">Press return to search</div>
-            <div class="placeholder"></div>
         </div>
      </div>
 
         <div class="info-wrapper">
             <div class="title-grid">
-                <div class="placeholder"></div>
                 <div class="blue-title">Recent Posts</div>
             </div>
             <div class="section">
-                <div class="placeholder"></div>
                 <div class="container">
-                    <div class="title">Guide to rendering posts on a Google Map in Rails</div>
+                    <div class="title">Guide to rendering points on a Google Map</div>
                     <div class="Code-Language">JavaScript</div>
                 </div>
 
                 <div class="container">
-                    <div class="title">Guide to rendering posts on a Google Map in Rails</div>
+                    <div class="title">Guide to rendering points on a Google Map</div>
                     <div class="Code-Language">JavaScript</div>
                 </div>
 
                 <div class="container">
-                    <div class="title">Guide to rendering posts on a Google Map in Rails</div>
+                    <div class="title">Guide to rendering points on a Google Map</div>
                     <div class="Code-Language">JavaScript</div>
                 </div>
-                <div class="placeholder"></div>
             </div>
 
         </div>
