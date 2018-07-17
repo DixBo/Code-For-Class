@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Google</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  
+  <style>
+      .heading-wrapper {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          padding-top: 7px;
+      }
+
+      .align-left {
+          display: flex;
+      }
+
+      .align-left div {
+          padding-left: 15px;
+      }
+      
+      .align-right {
+          display: flex;
+          justify-content: flex-end;
+      }
+
+       .align-right div {
+          padding-left: 15px;
+      }
+
+       .align-right i {
+          padding-left: 15px;
+      }
+
+      .logo-Wrapping {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-top: 109px;
+      }
+
+      img {
+          width: 350px;
+      }
+
+      .search-mic {
+          display: flex;
+          justify-content: center;
+      }
+
+      .search-mic input {
+          width: 450px;
+          height: 40px;
+      }
+
+      .search-mic input[type="text"]{
+          border: 1px solid rgba(100, 100, 100, .5);
+          border-radius: 3px;
+
+      }
+  
+  </style>
+</head>
+<body>
+    <!-- heading items -->
+    <div class="heading-wrapper">
+        <div class="align-left">
+            <div class="About">About</div>
+            <div class="store">Store</div>
+        </div>
+        <div class="align-right">
+            <div class="Gmail">Gmail</div>
+            <div class="Pictures">Images</div>
+            <i class="fas fa-th"></i>
+            <div class="sign-in">
+                <button class="btn-sign-in">Sign In</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- logo -->
+    <div class="logo-Wrapping">
+        <img src="images/Google-Hummingbird-Algorithm-Update.jpg" alt="Google animal logo">
+    </div>
+    <!-- searchbar/mic -->
+    <div class="search-mic">
+        <input type="text"> 
+        <i class="fas fa-microphone"></i>
+    </div>
+
+    <!-- buttons -->
+    <div class="btn-wrapper">
+        <button class="Google-Search">Google Search</button>
+        <button class="Spinner">I'm Feeling Lucky</button>
+    </div>
+    <!-- footer -->
+    <div class="footer-wrapper">
+        <div class="Advertising">Advertising</div>
+        <div class="Business">Business</div>
+        <div class="Privacy">Privacy</div>
+        <div class="Terms">Terms</div>
+        <div class="Settings">Settings</div>
+    </div>
+
+</body>
+</html>
