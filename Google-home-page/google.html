@@ -6,14 +6,32 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   
   <style>
+      html {
+          height: 100%;
+      }
+      body {
+          display: grid;
+      }
       .heading-wrapper {
           display: grid;
           grid-template-columns: 1fr 1fr;
           padding-top: 7px;
       }
 
+      .heading-wrapper a {
+          color: black;
+          text-decoration: none;
+          font-size: 14px;
+      }
+
+      .heading-wrapper a:hover {
+          color: black;
+          text-decoration: underline;
+      }
+
       .align-left {
           display: flex;
+
       }
 
       .align-left div {
@@ -33,6 +51,24 @@
           padding-left: 15px;
       }
 
+      .fa-th {
+          font-size: 20px;
+          color: lightslategray;
+      }
+
+      .fa-th:hover {
+          color: black;
+      }
+
+      .btn-sign-in {
+          background-color: #4683ea;
+          color: whitesmoke;
+          border: 1px solid #4285f4;
+          height: 28px;
+          font-weight: bold;
+          border-radius: 2px;
+      }
+
       .logo-Wrapping {
           display: flex;
           justify-content: center;
@@ -47,17 +83,120 @@
       .search-mic {
           display: flex;
           justify-content: center;
+          position: relative;
       }
 
       .search-mic input {
           width: 450px;
           height: 40px;
+          position: absolute;
+          box-shadow: 1px 2px rgba(100, 100, 100, .2);
+      }
+
+      .search-mic input:hover, input:active, input:focus {
+        box-shadow: 1px 3px 5px 1px rgba(100, 100, 100, .3);
+        border-color: red;
       }
 
       .search-mic input[type="text"]{
           border: 1px solid rgba(100, 100, 100, .5);
           border-radius: 3px;
+      }
+    
+      .search-mic i {
+          position: absolute;
+          right: 250px;
+          top: 12px;
+      }
 
+      .btn-wrapper {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr 1fr;
+          grid-column-gap: 10px;
+      }
+
+      .Google-Search {
+          height: 36px;
+          width: 140px; 
+          border-radius: 3px;
+          background-color: rgba(232, 234, 237, .8);
+          color: rgba(100, 100, 100, .9);
+          font-weight: 600;
+          border: none;
+      }
+
+      .Spinner {
+          height: 36px;
+          width: 140px;
+          border-radius: 3px;
+          background-color: rgba(232, 234, 237, .8);
+          color: rgba(100, 100, 100, .9);
+          font-weight: 600;
+          border: none;
+      }
+
+      .spin {
+          grid-column: 3;
+          grid-row: 3;
+      }
+
+      .google {
+        display: flex;
+          grid-column: 2;
+          grid-row: 3;
+          justify-content: flex-end;
+      }
+
+      .footer-wrapper {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          padding-bottom: 7px;
+          background-color: rgba(232, 234, 237, .8);
+          width: 100%;
+          height: 40px;
+          border-top: 1px solid rgba(100, 100, 100, .2);
+      }
+
+      .footer-wrapper a {
+          color: #666;
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 400;
+      }
+
+      .footer-wrapper a:hover {
+          text-decoration: underline;
+      }
+
+      .align-left-f {
+          display: flex;
+          align-items: center;
+      }
+
+      .align-left-f div {
+          padding-left: 15px;
+      }
+      
+      .align-right-f {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+      }
+
+       .align-right-f div {
+          padding-left: 15px;
+      }
+
+      .Settings {
+          padding-right: 20px;
+      }
+
+      .sign-in {
+          padding-right: 20px;
       }
   
   </style>
@@ -66,13 +205,13 @@
     <!-- heading items -->
     <div class="heading-wrapper">
         <div class="align-left">
-            <div class="About">About</div>
-            <div class="store">Store</div>
+            <div class="About"> <a href="#">About</a> </div>
+            <div class="store"> <a href="#">Store</a> </div>
         </div>
         <div class="align-right">
-            <div class="Gmail">Gmail</div>
-            <div class="Pictures">Images</div>
-            <i class="fas fa-th"></i>
+            <div class="Gmail"> <a href="#">Gmail</a> </div>
+            <div class="Pictures"> <a href="#">Images</a> </div>
+            <a href="#"><i class="fas fa-th"></i></a>
             <div class="sign-in">
                 <button class="btn-sign-in">Sign In</button>
             </div>
@@ -91,17 +230,25 @@
 
     <!-- buttons -->
     <div class="btn-wrapper">
-        <button class="Google-Search">Google Search</button>
-        <button class="Spinner">I'm Feeling Lucky</button>
+        <div class="google">
+            <button class="Google-Search">Google Search</button>
+        </div>
+        <div class="spin">
+            <button class="Spinner">I'm Feeling Lucky</button>
+        </div>
     </div>
     <!-- footer -->
-    <div class="footer-wrapper">
-        <div class="Advertising">Advertising</div>
-        <div class="Business">Business</div>
-        <div class="Privacy">Privacy</div>
-        <div class="Terms">Terms</div>
-        <div class="Settings">Settings</div>
-    </div>
+        <div class="footer-wrapper">
+            <div class="align-left-f">
+                <div class="Advertising"> <a href="#">Advertising</a> </div>
+                <div class="Business">  <a href="#">Business</a> </div>
+            </div>
+            <div class="align-right-f">
+                <div class="Privacy"> <a href="#">Privacy</a> </div>
+                <div class="Terms"> <a href="#">Terms</a> </div>
+                <div class="Settings"> <a href="#">Settings</a> </div>
+            </div>
+        </div>
 
 </body>
 </html>
