@@ -77,8 +77,8 @@
       }
 
       img {
-          /* width: 350px; */
-          width: 43%;
+          width: 350px;
+          /* width: 43%; */
       }
 
       .search-mic {
@@ -88,8 +88,8 @@
       }
 
       .search-mic input {
-          /* width: 450px; */
-          width: 50%;
+          width: 450px;
+          /* width: 50%; */
           height: 40px;
           position: absolute;
           box-shadow: 1px 2px rgba(100, 100, 100, .2);
@@ -106,11 +106,26 @@
       }
     
       .search-mic i {
-          position: absolute;
-          /* right: 250px; */
+          /* position: absolute;
+          right: 250px;
           right: 27%;
-          top: 12px;
+          top: 12px; */
+          display: flex;
+          z-index: 2;
+          justify-content: flex-end;
+          align-items: center;
+          padding-right: 10px;
       }
+
+      .mic {
+        display: grid;
+          z-index: 2;
+          grid-template-columns: 1fr;
+          width: 450px;
+          height: 40px;
+      }
+
+      
 
       .btn-wrapper {
           display: grid;
@@ -129,6 +144,12 @@
           border: none;
       }
 
+      .Google-Search:hover {
+          background-color: rgba(232, 234, 237, 1);
+          color: rgba(00, 00, 00, .9);
+          border: 1px solid rgba(00, 00, 00, .3);
+      }
+
       .Spinner {
           height: 36px;
           width: 140px;
@@ -139,15 +160,21 @@
           border: none;
       }
 
+      .Spinner:hover {
+          background-color: rgba(232, 234, 237, 1);
+          color: rgba(00, 00, 00, .9);
+          border: 1px solid rgba(00, 00, 00, .3);
+      }
+
       .spin {
           grid-column: 3;
-          grid-row: 3;
+          grid-row: 2;
       }
 
       .google {
         display: flex;
           grid-column: 2;
-          grid-row: 3;
+          grid-row: 2;
           justify-content: flex-end;
       }
 
@@ -228,7 +255,9 @@
     <!-- searchbar/mic -->
     <div class="search-mic">
         <input type="text"> 
-        <i class="fas fa-microphone"></i>
+        <div class="mic">
+            <i class="fas fa-microphone"></i>
+        </div>
     </div>
 
     <!-- buttons -->
