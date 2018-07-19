@@ -133,7 +133,7 @@
       .Google-Search:hover {
           background-color: rgba(232, 234, 237, 1);
           color: rgba(00, 00, 00, .9);
-          border: none;
+          border: 1px solid rgba(00, 00, 00, 1);
       }
 
       .Spinner {
@@ -144,6 +144,12 @@
           color: rgba(100, 100, 100, .9);
           font-weight: 600;
           border: 1px solid rgba(00, 00, 00, 0);
+      }
+
+      .Spinner:hover {
+        background-color: rgba(232, 234, 237, 1);
+          color: rgba(00, 00, 00, .9);
+          border: 1px solid rgba(00, 00, 00, 1);
       }
 
       .spin {
@@ -207,6 +213,20 @@
 
       .sign-in {
           padding-right: 20px;
+      }
+
+      @media(max-width: 473px) {
+          img {
+              width: 250px;
+          }
+
+          .search-mic {
+              width: 325px;
+          }
+
+          .search-mic input {
+              width: 275px;
+          }
       }
   
   </style>
