@@ -82,19 +82,16 @@
 
       .search-mic {
           display: flex;
-          justify-content: center;
-          position: relative;
-      }
-
-      .search-mic input {
+          justify-self: center;
+          box-shadow: 1px 2px rgba(100, 100, 100, .2);
+          border: 1px solid rgba(100, 100, 100, .5);
           width: 450px;
           height: 40px;
-          position: absolute;
-          box-shadow: 1px 2px rgba(100, 100, 100, .2);
       }
 
-      .search-mic input:hover, input:active, input:focus {
+      .search-mic:hover {
         box-shadow: 1px 3px 5px 1px rgba(100, 100, 100, .3);
+<<<<<<< HEAD
         
       }
 
@@ -108,6 +105,29 @@
           right: 250px;
           top: 12px;
       }
+=======
+      }
+
+      .search-mic input {
+          display: flex;
+          justify-self: center;
+          width: 400px;
+          height: 35px;
+          outline: none;
+          border: none;
+          padding-left: 10px;
+      }
+
+      .search-mic a {
+          display: flex;
+          align-items: center;
+          padding-left: 15px;
+          font-size: 20px;
+          text-decoration: none;
+          color: #f44242;
+      }
+      
+>>>>>>> temp
 
       .btn-wrapper {
           display: grid;
@@ -126,6 +146,15 @@
           border: none;
       }
 
+<<<<<<< HEAD
+=======
+      .Google-Search:hover {
+          background-color: rgba(232, 234, 237, 1);
+          color: rgba(00, 00, 00, .9);
+          border: none;
+      }
+
+>>>>>>> temp
       .Spinner {
           height: 36px;
           width: 140px;
@@ -133,7 +162,7 @@
           background-color: rgba(232, 234, 237, .8);
           color: rgba(100, 100, 100, .9);
           font-weight: 600;
-          border: none;
+          border: 1px solid rgba(00, 00, 00, 0);
       }
 
       .spin {
@@ -225,7 +254,11 @@
     <!-- searchbar/mic -->
     <div class="search-mic">
         <input type="text"> 
+<<<<<<< HEAD
         <i class="fas fa-microphone"></i>
+=======
+        <a href="#"><i class="fas fa-microphone"></i></a> 
+>>>>>>> temp
     </div>
 
     <!-- buttons -->
@@ -234,7 +267,7 @@
             <button class="Google-Search">Google Search</button>
         </div>
         <div class="spin">
-            <button class="Spinner">I'm Feeling Lucky</button>
+            <button class="Spinner" onmouseover="getRandomArbitrairy()" onmouseout="hold()">I'm Feeling Lucky</button>
         </div>
     </div>
     <!-- footer -->
@@ -249,6 +282,17 @@
                 <div class="Settings"> <a href="#">Settings</a> </div>
             </div>
         </div>
-
 </body>
+
+<script>
+    var rand = ["I'm Feeling Adventurous", "I'm Feeling generous", "I'm Feeling Playful", "I'm Feeling Puzzled", "I'm Feeling Curious", "I'm Feeling Artistic", "I'm Feeling Doodley", "I'm Feeling Stellar", "I'm Feeling Wonderful", "I'm Feeling Trendy", "I'm Feeling Hungry"]
+    function getRandomArbitrairy() {
+        var randomNumber = Math.floor(Math.random() * (rand.length));
+        document.querySelector(".Spinner").innerHTML = rand[randomNumber];
+    };
+    function hold() {
+        const holder = "I'm Feeling Lucky";
+        document.querySelector(".Spinner").innerHTML = holder;
+    }
+</script>
 </html>
